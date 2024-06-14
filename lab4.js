@@ -55,13 +55,17 @@
         );
         return decrypted.toString(CryptoJS.enc.Utf8); // Devuelve el mensaje descifrado.
     }
-   // En esta parte, se muestran los valores de cada atributo id en la consola.
-    Ids.forEach((Id) => {
-        const mensaje = decrypt(Id.id, llave)
-        console.log(Id.id + " " + mensaje)
-        const div = document.createElement("div");
+    
+// Recorre cada elemento en el array Ids, descifra el mensaje y lo muestra en la consola
+Ids.forEach((Id) => {
+    const mensaje = decrypt(Id.id, llave);
+    console.log(`${Id.id} ${mensaje}`);
+
+    // Crea un nuevo elemento div y agrega el mensaje descifrado al cuerpo del documento
+    const div = document.createElement("div");
     div.textContent = mensaje;
     document.body.appendChild(div);
-    });
+});
+
 
 })();
