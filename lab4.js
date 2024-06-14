@@ -61,7 +61,7 @@ Ids.forEach((Id) => {
     const mensaje = decrypt(Id.id, llave);
     console.log(`${Id.id} ${mensaje}`);
 
-    // Crea un nuevo elemento div y agrega el mensaje descifrado al cuerpo del documento
+// Crea un nuevo elemento div y agrega el mensaje descifrado al cuerpo del documento
     const div = document.createElement("div");
     div.textContent = mensaje;
     document.body.appendChild(div);
